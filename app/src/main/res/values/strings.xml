@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Motivation</string>
+    <string name="image_infinity_for_all_phrase">image infinity for all phrase</string>
+    <string name="image_happy_for_happy_phrase">image happy for happy phrase</string>
+    <string name="image_sun_for_morning_phrase">image sun for morning phrase</string>
+    <string name="frase">Frase</string>
+    <string name="nova_frase">Nova frase</string>
+    <string name="vamos_come_ar">Vamos começar?</string>
+    <string name="qual_seu_nome">Qual seu nome?</string>
+    <string name="salvar">SALVAR</string>
 </resources>
