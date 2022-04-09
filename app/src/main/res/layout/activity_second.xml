@@ -5,14 +5,15 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:padding="16dp"
-    tools:context=".ui.SplashActivity">
+    tools:context=".ui.SecondActivity"
+    tools:ignore="Autofill">
 
     <TextView
         android:id="@+id/textToStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Vamos começar?"
+        android:text="@string/vamos_come_ar"
         android:textColor="@color/white"
         android:textSize="32sp" />
 
@@ -23,21 +24,21 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:gravity="center"
-        android:hint="Qual seu nome?"
+        android:hint="@string/qual_seu_nome"
         android:inputType="text"
         android:textColorHint="@color/white"
         android:textSize="25sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:background="@color/colorAccent"
+        android:backgroundTint="@color/colorAccent"
         android:padding="8dp"
-        android:text="SALVAR"
+        android:text="@string/salvar"
         android:textColor="@color/white" />
 
 </RelativeLayout>
