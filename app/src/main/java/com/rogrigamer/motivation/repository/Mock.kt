@@ -6,10 +6,12 @@ data class Phrase(val description: String, val category: Int)
 
 class Mock {
 
-    private val ALL = MotivationConstants.PHRASEFILTER.ALL
-    private val HAPPY = MotivationConstants.PHRASEFILTER.HAPPY
-    private val MORNING = MotivationConstants.PHRASEFILTER.MORNING
+    companion object {
 
+        private const val ALL = MotivationConstants.PHRASEFILTER.ALL
+        private const val HAPPY = MotivationConstants.PHRASEFILTER.HAPPY
+        private const val MORNING = MotivationConstants.PHRASEFILTER.MORNING
+    }
 
     private val mListPhrases: List<Phrase> = listOf(
         Phrase("Não sabendo que era impossível, foi lá e fez.", HAPPY),
