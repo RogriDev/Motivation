@@ -19,6 +19,7 @@
             android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
+            android:contentDescription="@string/image_infinity_for_all_phrase"
             android:src="@drawable/ic_all"
             app:tint="@color/white" />
 
@@ -28,6 +29,7 @@
             android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
+            android:contentDescription="@string/image_happy_for_happy_phrase"
             android:src="@drawable/ic_happy"
             app:tint="@color/white" />
 
@@ -37,9 +39,9 @@
             android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
+            android:contentDescription="@string/image_sun_for_morning_phrase"
             android:src="@drawable/ic_sun"
             app:tint="@color/white" />
-
 
     </LinearLayout>
 
@@ -61,7 +63,7 @@
         android:layout_centerVertical="true"
         android:layout_margin="16dp"
         android:layout_marginTop="32dp"
-        android:text="Frase"
+        android:text="@string/frase"
         android:textAlignment="center"
         android:textSize="22sp" />
 
@@ -73,16 +75,16 @@
         android:layout_marginTop="32dp"
         android:background="@color/colorAccent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/buttonNewPhrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/ripple_button"
+        android:backgroundTint="@color/colorPrimary"
         android:padding="16dp"
-
-        android:text="Nova frase"
+        android:text="@string/nova_frase"
         android:textColor="@color/white" />
+
 </RelativeLayout>
