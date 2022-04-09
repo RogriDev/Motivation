@@ -3,39 +3,27 @@ package com.rogrigamer.motivation.ui
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
 import com.rogrigamer.motivation.R
+import com.rogrigamer.motivation.databinding.ActivitySecondBinding
 import com.rogrigamer.motivation.infra.MotivationConstants
 import com.rogrigamer.motivation.infra.SecurityPreferences
 
-class SplashActivity : AppCompatActivity(), View.OnClickListener {
+class SecondActivity : AppCompatActivity(), View.OnClickListener {
+
+    private lateinit var binding: ActivitySecondBinding
 
     private lateinit var msecurityPreferences: SecurityPreferences
 
-    private var buttonSave: AppCompatButton? = null
-    private var editName: EditText? = null
-    private var textToStart: TextView? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         msecurityPreferences = SecurityPreferences(this)
 
-        buttonSave = findViewById(R.id.buttonSave)
-        editName = findViewById(R.id.editName)
-        textToStart = findViewById(R.id.textToStart)
-
-        //to hide supportActionBar
-        if (supportActionBar != null) {
-            supportActionBar!!.hide()
-        }
-
-        buttonSave?.setOnClickListener(this)
+        binding.buttonSave.setOnClickListener(this)
 
         verifyName()
 
@@ -60,7 +48,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleSave() {
-        val name = editName?.text.toString()
+        val name = binding.editName.text.toString()
 
         if (name != "") {
             msecurityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
@@ -70,6 +58,5 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         } else {
             Toast.makeText(this, "Informe seu nome!", Toast.LENGTH_SHORT).show()
         }
-
     }
 }
